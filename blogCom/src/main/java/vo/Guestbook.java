@@ -8,9 +8,16 @@ public class Guestbook {
 		private String createDate;
 		private String updateDate;
 		private String guestbookPw;
+		@Override
+		public String toString() {
+			return "Guestbook [guestbookNo=" + guestbookNo + ", guestbookContent=" + guestbookContent + ", writer="
+					+ writer + ", createDate=" + createDate + ", updateDate=" + updateDate + ", guestbookPw="
+					+ guestbookPw + "]";
+		}
 		public int getGuestbookNo() {
 			return guestbookNo;
 		}
+		
 		public void setGuestbookNo(int guestbookNo) {
 			this.guestbookNo = guestbookNo;
 		}
