@@ -37,8 +37,8 @@
 	//2^10 kbyte = 1mbyte
 	//100 mbyte = 1024*1024*100 byte =104857600 byte 곰셈을 계산해서 코딩하면 가독성이 떨어진다. 24* 60*60
 	
-	String photoPw = multiReq.getParameter("photoPw");
-	String writer = multiReq.getParameter("writer");
+		String photoPw = multiReq.getParameter("photoPw");
+		String writer = multiReq.getParameter("writer");
 	
 	// input type="file" name="photo" 
 		String photoOriginalName = multiReq.getOriginalFileName("photo"); // 파일 업로드시 원본의 이름
@@ -56,6 +56,7 @@
 			//db저장
 			System.out.println("dbㄱㄱ");
 			PhotoDao photoDao = new PhotoDao();
+
 			Photo photo = new Photo();
 			photo.setPhotoName(photoName);
 			photo.setPhotoOriginalName(photoOriginalName);

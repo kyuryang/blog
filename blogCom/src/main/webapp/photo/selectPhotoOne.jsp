@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body>
-		<div class="containerfluid">
+		<div class="containerfluid" align="center">	
 			<jsp:include page="/inc/upMenu.jsp"></jsp:include>
 	 	<div class="row">
  	 	<div class="col">
@@ -59,6 +59,7 @@
 	</table>
 	<ul class="pagination justify-content-center " style="margin:100px ">
 		  <li class="page-item"><a href="<%=request.getContextPath()%>/photo/photoList.jsp">뒤로가기</a></li>
+		
 		  <li class="page-item"><a href="<%=request.getContextPath()%>/photo/deletePhotoForm.jsp?photoNo=<%=photo.getPhotoNo() %>">삭제</a></li>
 	</ul>
 	</div>

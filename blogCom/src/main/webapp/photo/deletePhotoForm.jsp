@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="containerfluid">
+	<div class="containerfluid" align="center">
 		<jsp:include page="/inc/upMenu.jsp"></jsp:include>
 	 	<div class="row">
  	 	<div class="col">

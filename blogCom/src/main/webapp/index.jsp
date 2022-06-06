@@ -6,7 +6,10 @@
 	<title>Index</title>
 </head>
 <body>
+	<div class="containerfluid" align="center">
 		<jsp:include page="/inc/upMenu.jsp"></jsp:include>
+	</div>
+		
 		<h1>HOME</h1>
 		<table>
 				<tr>

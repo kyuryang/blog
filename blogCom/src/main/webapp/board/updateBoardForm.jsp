@@ -58,6 +58,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body>
+	<div class="containerfluid" align="center">
+		<jsp:include page="/inc/upMenu.jsp"></jsp:include>
+	</div>
 	<div class="mt-4 p-5 bg-info text-dark rounded container-fluid text-center">
 		<h1>게시글 수정</h1>
 	</div>
@@ -105,7 +108,12 @@
 				<td><input type="password" class="form-control" name="boardPw" value=""></td>
 			</tr>
 		</table>
-		<div><button class="btn btn-outline-light text-dark" type="submit">수정</button></div>
+		<div>
+				<ul class="pagination">
+					<li><a class="page-link" href="<%=request.getContextPath()%>/board/boardOne.jsp?boardNo=<%=board.getBoardNo()%>">이전</a></li>
+					<li><button class="btn btn-outline-light text-dark" type="submit">수정</button></li>
+				</ul>
+		</div>
 		</div>
 	</form>
 </body>

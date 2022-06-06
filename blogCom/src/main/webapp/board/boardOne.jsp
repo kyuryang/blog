@@ -73,6 +73,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body>
+		<div class="containerfluid" align="center">
+		<jsp:include page="/inc/upMenu.jsp"></jsp:include>
+	</div>
 			<div class="mt-4 p-5 bg-info text-dark rounded container-fluid text-center">
 				<h1>board 상세보기</h1>
 			</div>
@@ -119,7 +122,7 @@
 				<td><%= board.getUpdateDate()%></td>
 			</tr>
 		</table>
- 	   <div>
+ 	   <div class="container  col-3" >	
  	   		<ul class="pagination">
 				<li class="page-item"><a class="page-link" href="<%=request.getContextPath()%>/board/updateBoardForm.jsp?boardNo=<%= board.getBoardNo()%>">수정</a></li>
 				<li class="page-item"><a class="page-link" href="<%=request.getContextPath()%>/board/deleteBoardForm.jsp?boardNo=<%= board.getBoardNo()%>">삭제</a></li>

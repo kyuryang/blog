@@ -23,8 +23,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="containerfluid">
+		<div class="containerfluid" align="center">
 		<!-- 메인 메뉴 시작 -->
+		
 		<jsp:include page="/inc/upMenu.jsp"></jsp:include>
 		<!-- include시 컨텍스트명 (프로젝트이름)을 명시하지않는다 -->
 		<!--  메인메뉴 끝 -->
@@ -37,7 +38,7 @@
 		</div>
 		<div class="col p-1">
 			<ul class="pagination">
-				 <li class="page-item"><a href="<%=request.getContextPath()%>/photo/insertPhotoForm.jsp">사진 추가</a></li>
+				 <li class="page-item"><a href="<%=request.getContextPath()%>/photo/insertPhotoForm.jsp"><h3>사진 등록</h3></a></li>
 			</ul>
 		</div>
 
