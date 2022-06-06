@@ -57,7 +57,7 @@
 	<%
 	for (Guestbook g : list) {
 	%>
-	<div class="container pt-4 col-6" >	
+	<div class="container col-6" >	
 		<table class="table table-hover table-dark" >
 			<tr>
 				<td><%=g.getWriter()%></td>
@@ -73,7 +73,7 @@
 	%>
 	</table>	
 	</div>
-	<div class="container pt-4 col-6" >	
+	<div class="container col-6" >	
 	<%
 		if (currentPage > 1) {
 	%>
@@ -108,8 +108,8 @@
 						cols="60"></textarea></td>
 				
 			</tr>
-						<tr>
-			<td><button class="btn btn-link btn-outline-warning" type="submit">입력</button></td>
+			<tr>
+				<td><button class="btn btn-link btn-outline-warning" type="submit">입력</button></td>
 			</tr>
 		</table>
 	
