@@ -106,6 +106,12 @@ conn.close();
 <title>boardList</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
+<style>
+	bt {
+		display:grid;
+	}
+
+</style>
 </head>
 <body>
 	<div class="containerfluid" align="center">
@@ -164,30 +170,31 @@ conn.close();
 				</table>
 				<div class="container  col-6" >	
 					<ul class="pagination">
-
+					
 						<!-- 페이지가 만약 10페이지였으면 이전을 누르면 9페이지가 되고 다음을 누르면 11페이지 -->
+						
+																	<!--  마지막 페이지 ? 
+									10개			 1
+									11,12,13~20  2
+									21~30 		 3
+									31~40		 4
+									
+									마지막 페이지 = 전체행 /rowPerPage
+								 -->
 						<%
 						if (currentPage > 1) { //현재페이지가 1이면 이전페이지가 존재해서는 안된다.
 						%>
 
-						<li class="page-item"><a class="page-link .active" href="<%=request.getContextPath()%>/board/boardList.jsp?currentPage=<%=currentPage - 1%>&categoryName=<%=categoryName%>">이전</a></li>
+						<li class="page-item"><a class="page-link .active " id="bt"  href="<%=request.getContextPath()%>/board/boardList.jsp?currentPage=<%=currentPage - 1%>&categoryName=<%=categoryName%>">  이전  </a></li>
 						<%
 						}
 						%>
 
-						<!--  마지막 페이지 ? 
-				10개			 1
-				11,12,13~20  2
-				21~30 		 3
-				31~40		 4
-				
-				마지막 페이지 = 전체행 /rowPerPage
-			 -->
 						<%
-						for (int i = 1; i < lastPage; i++) {
+						for (int i = 1; i < lastPage; i++) {			//1~부터 라스트페이지까지 10개씩 끊어서 출력
 							if ((((currentPage / 10) + 1) * 10 -1) >= i && i >= ((currentPage / 10) * 10)) {
 						%>
-						<li class="page-item"><a class="page-link .active" href="<%=request.getContextPath()%>/board/boardList.jsp?currentPage=<%=i%>"><%=i%></a></li>
+						<li class="page-item"><a class="page-link .active " href="<%=request.getContextPath()%>/board/boardList.jsp?currentPage=<%=i%>"><%=i%></a></li>
 						<%
 						}
 						}
@@ -195,7 +202,7 @@ conn.close();
 						<%
 						if (currentPage < lastPage) {
 						%>
-						<li class="page-item"><a class="page-link active" href="<%=request.getContextPath()%>/board/boardList.jsp?currentPage=<%=currentPage + 1%>&categoryName=<%=categoryName%>">다음</a>
+						<li class="page-item"><a class="page-link active row" href="<%=request.getContextPath()%>/board/boardList.jsp?currentPage=<%=currentPage + 1%>&categoryName=<%=categoryName%>">다음</a>
 						</li>
 						<%
 						}

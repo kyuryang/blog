@@ -51,7 +51,7 @@
 	</div>
 	<div class="mt-4 p-5 bg-info text-dark  text-center  ">
 		<h1>
-			total데이터:<%=guestbookDao.selectGuestbookTotalRow()%>
+			방명록(total:<%=guestbookDao.selectGuestbookTotalRow()%>)
 		</h1>
 	</div>
 	<%
